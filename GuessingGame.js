@@ -39,10 +39,9 @@ do {
 		Turns++
 		totalTurns++
 	}
-	Turns--
-	alert("You found the answer in "+Turns+" turns");
+	alert("You found the answer in "+(Turns - 1)+" turns");
 	Average = (totalTurns / Games)
-	alert("Your average turns per game is "+Average".");
+	alert("Your average turns per game is "+Average+".");
 	alert("You've played the game "+Games+" times.");
 	playAgain = prompt("Would you like to play again? (y = yes)");
 	}
