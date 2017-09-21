@@ -4,7 +4,7 @@ var totalTurns = 0;
 var Games = 0;
 var Average = 0;
 var playAgain = "y";
-var Turns = 0;
+var turns = 0;
 
 
 // alert("totalTurns="+totalTurns+" Games"+Games+" Average"+Average" playAgain"+playAgain)
@@ -13,20 +13,18 @@ var Turns = 0;
 
 do {
 	Games++
-	var Answer 
-	= Math.floor(Math.random() * 
-	(99) + 1);
+	var Answer = Math.floor(Math.random() * (99) + 1);
 	alert(Answer);
-	Turns = 1
+	turns = 1
 	do	{
-		Guess = prompt("Turn: "+Turns+" Enter a guess 1-100.")
+		Guess = prompt("Turn: "+turns+" Enter a guess 1-100.")
 		if (Guess > Answer){
 			alert("Too high.")
-			Turns++
+			turns++
 		}
 		else if (Guess < Answer){
 			alert("Too low.")
-			Turns++
+			turns++
 			totalTurns++
 		}
 		else if (isNaN(Guess)){
@@ -36,12 +34,12 @@ do {
 	while (Guess != Answer)
 		if (Guess == Answer){
 		alert("Congratulations, you guessed the number.")
-		Turns++
+		turns++
 		totalTurns++
 	}
-	alert("You found the answer in "+(Turns - 1)+" turns");
+	alert("You found the answer in "+(turns - 1)+" turns");
 	Average = (totalTurns / Games)
-	alert("Your average turns per game is "+Average+".");
+	alert("Your average turns per game is "+(Average+1)+".");
 	alert("You've played the game "+Games+" times.");
 	playAgain = prompt("Would you like to play again? (y = yes)");
 	}
